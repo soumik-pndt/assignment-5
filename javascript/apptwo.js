@@ -1,8 +1,8 @@
-document.getElementById('donate-btn').addEventListener('click',function(event){
+document.getElementById('donate-btn-two').addEventListener('click',function(event){
     event.preventDefault();
 
-    const addDonation = getInputFieldValueById('input-donate');
-    const donationAmount = getTextFieldValueById('total-money');
+    const addDonation = getInputFieldValueById('input-donate-two');
+    const donationAmount = getTextFieldValueById('total-money-two');
     const accountBalance = getTextFieldValueById('account-balance');
     console.log(addDonation);
 
@@ -11,7 +11,7 @@ document.getElementById('donate-btn').addEventListener('click',function(event){
 
         // console.log(addDonation,balance);
         const newBalance = donationAmount + addDonation;
-        document.getElementById('total-money').innerText = newBalance;
+        document.getElementById('total-money-two').innerText = newBalance;
         const newAccountBalance = accountBalance - addDonation;
         document.getElementById('account-balance').innerText = newAccountBalance;
 
@@ -20,4 +20,3 @@ document.getElementById('donate-btn').addEventListener('click',function(event){
         alert('failed to add money')
     }
 })
-
