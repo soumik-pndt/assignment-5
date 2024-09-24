@@ -14,6 +14,16 @@ document.getElementById('donate-btn-two').addEventListener('click',function(even
         document.getElementById('total-money-two').innerText = newBalance;
         const newAccountBalance = accountBalance - addDonation;
         document.getElementById('account-balance').innerText = newAccountBalance;
+        let headingTwo = document.getElementById("heading-two").innerText;
+
+        let historyBox =document.createElement("div");
+        historyBox.className="bg-white p-3 my-3 rounded-lg border-2 w-[90%] mx-auto";
+        historyBox.innerHTML=`
+        <div>$${addDonation} ${headingTwo}</div>
+        <div>${new Date()} </div>
+        `
+        let historyList=document.getElementById("history-list");
+        historyList.insertBefore(historyBox,historyList.firstChild);
 
     }
     else {
